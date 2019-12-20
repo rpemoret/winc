@@ -108,7 +108,7 @@ addelistenerdelete();
 // delete item from list
 
 const deletelistitem = async function(taskitem) {
-  const deletelistitem =
+  const listitemdelete =
     `https://wincacademydatabase.firebaseio.com/rene/tasks.json` + taskitem;
   const deleteitem = taskitem;
   try {
