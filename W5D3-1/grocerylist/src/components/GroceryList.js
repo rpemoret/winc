@@ -10,8 +10,9 @@ class GroceryList extends React.Component {
     super(props);
     this.state = {
       GroceryItems: [
-        <GroceryListItem title="Oranges" />,
-        <GroceryListItem title="Apples" />
+        { id: 1, title: "Oranges" },
+        { id: 2, title: "Apples" },
+        { id: 3, title: "" }
       ]
     };
   }
