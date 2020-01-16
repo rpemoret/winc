@@ -3,7 +3,8 @@ import GroceryListItem from "./GroceryListItem";
 
 // Container for GroceryListItem, states items
 // Na het JSX element, de const GroceryListItem komen de attributes ervan zoals title
-// props are basically attributes
+// props are basically attributes like <GroceryListItem title="Oranges" />
+// you can put them in an array as well
 
 class GroceryList extends React.Component {
   constructor(props) {
