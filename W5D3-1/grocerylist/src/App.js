@@ -31,6 +31,8 @@ function App(props) {
 
 export default App;
 
+ReactDOM.render(<App />, document.getElementById("root"));
+
 /*
 import * as serviceWorker from './serviceWorker';
 
