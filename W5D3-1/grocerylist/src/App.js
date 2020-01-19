@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import GroceryList from "./components/GroceryList";
 
+// to open use C:\Users\René Moret\Documents\GitHub\winc\W5D3-1>cd grocerylist, npm start
 // Container for GroceryList
 
 function App(props) {
@@ -36,5 +37,4 @@ ReactDOM.render(<App />, document.getElementById("root"));
 /*
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 */
