@@ -5,19 +5,33 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      GroceryItems: [
-        { id: 1, title: "Oranges song" },
-        { id: 2, title: "Apples song" },
-        { id: 3, title: "" }
-      ]
+      SongListOptions: [
+        { id: 1, title: "Oranges song", genre: "", author: "" },
+        { id: 2, title: "Apples song", genre: "", author: "" },
+        { id: 3, title: "", genre: "", author: "" }
+      ],
+      SongList: [{ id: 1, title: "Another song", genre: "", author: "" }]
     };
   }
 
-  addSong = SongTitle => {
-    // verander de state hier
-  };
-
   render() {
+    addSong = SongTitle => {
+      // verander de state hier
+      const newSong = {
+        id: this.state.SongList.length + 1,
+        title: SongTitle,
+        genre: SongGenre,
+        author: SongAuthor
+      };
+
+      this.setState(prevState => {
+        const newSongList = prevState.SongList.concat(newSong);
+        return {
+          SongList: newSongList
+        };
+      });
+    };
+
     return (
       <div className="GroceryList">
         <SongsList title="Songs" />
