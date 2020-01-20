@@ -1,4 +1,4 @@
-// A --- get the remaining parameters in an array with the rest operator
+// A --- get the remaining parameters in an array with the rest operator '...arguments'
 // B --- sum all parameters with reduce
 // C --- return all parameters with acc + item
 
