@@ -1,30 +1,42 @@
 import React from "react";
-import SongsList from "./SongsList";
+import SongListItem from "./SongsList";
 
 class SongOverview extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      GroceryItems: [
-        { id: 1, title: "Oranges song" },
-        { id: 2, title: "Apples song" },
-        { id: 3, title: "" }
-      ]
-    };
-  }
-
-  addSong = SongTitle => {
-    // verander de state hier
-  };
-
   render() {
+    const { SongListOptions } = this.props;
+    const listItems = SongListOptions
+      ? SongListOptions.map(addedsong => (
+          <SongListItem
+            key={addedsong.id}
+            addedsong={addedsong}
+            title={addedsong.title}
+            author={addedsong.author}
+          />
+        ))
+      : " ";
+
     return (
-      <div className="SongList">
-        <SongsList title="Songs" />
-      </div>
+      <React.Fragment>
+        <ul>{listItems}</ul>
+      </React.Fragment>
     );
   }
 }
+
+export default SongOverview;
+
+/*
+const SongsListItem = props => {
+  return (
+    <li className="list-item" key={props.id} value={props.title}>
+      {props.title}
+      {props.genre}
+      {props.author}
+      {props.rating}
+    </li>
+  );
+};
+*/
 
 /*
 class SongOverview extends Component {
@@ -57,5 +69,3 @@ class SongOverview extends Component {
   }
 }
 */
-
-export default SongOverview;

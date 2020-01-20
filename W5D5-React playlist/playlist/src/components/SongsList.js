@@ -6,12 +6,32 @@ import React from "react";
 
 // je kunt een key meegeven aan elk list item zodat React de volgorde van items kan bepalen
 
-const SongsList = props => {
+const SongsListItem = ({ clickSong, addedsong }) => {
   return (
-    <li className="list-item" key={props.id} value={props.title}>
-      {props.title}
-    </li>
+    <div>
+      <table>
+        <li
+          className="list-item"
+          onClick={clickSong}
+          key={addedsong.id}
+          value={addedsong.title}
+        >
+          <span>{addedsong.title}</span>
+        </li>
+
+        <br />
+
+        <li
+          className="list-item"
+          onClick={clickSong}
+          key={addedsong.id}
+          value={addedsong.author}
+        >
+          <span>{addedsong.author}</span>
+        </li>
+      </table>
+    </div>
   );
 };
 
-export default SongsList;
+export default SongsListItem;
