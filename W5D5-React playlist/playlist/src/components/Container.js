@@ -38,6 +38,23 @@ class Container extends React.Component {
       });
     };
 
+    /* You cannot mutate the state directly, so you have to use
+     a copy of the state like const list = [...this.state.SongListOptions] 
+     and then 
+     
+     const newlist = .map over that const. 
+     
+     Then you can add items within the .map function, and return 
+     the const list
+     
+     After that this.setState({SongListOptions : newlist})
+
+     --------------------------------------------------------------------
+
+     You can use .concat to return a new array that consists of
+     multiple previously defined arrays. So you don't mutate the state
+     directly again. */
+
     const addSongtoList = addedsong => {
       const addedsongtolist = {
         id: this.state.SongListOptions.length + 1,
