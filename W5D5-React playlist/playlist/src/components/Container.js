@@ -7,6 +7,7 @@ class Container extends React.Component {
     super(props);
     this.state = {
       SongListInput: "",
+      AuthorInput: "",
       SongListOptions: [
         {
           id: 1,
@@ -41,7 +42,8 @@ class Container extends React.Component {
       const addedsongtolist = {
         id: this.state.SongListOptions.length + 1,
         title: addedsong,
-        author: addedsong
+        author: addedsong,
+        genre: addedsong
       };
       this.setState({
         SongListOptions: this.state.SongListOptions.concat(addedsongtolist)
@@ -51,11 +53,21 @@ class Container extends React.Component {
     return (
       <div>
         <h3>------</h3>
+
         <InputField onSubmit={addSongtoList} />
         <SongOverview
           SongListOptions={this.state.SongListOptions}
           SongOverview={SongOverview}
         />
+
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Rating</th>
+          </tr>
+        </table>
       </div>
     );
   }

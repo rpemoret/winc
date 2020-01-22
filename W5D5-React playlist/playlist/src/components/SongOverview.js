@@ -11,6 +11,7 @@ class SongOverview extends React.Component {
             addedsong={addedsong}
             title={addedsong.title}
             author={addedsong.author}
+            genre={addedsong.genre}
           />
         ))
       : " ";

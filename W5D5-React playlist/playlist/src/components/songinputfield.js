@@ -7,6 +7,9 @@ class InputField extends React.Component {
 
   render() {
     const onInput = event => {
+      const target = event.target;
+      const value = target.type === "checkbox" ? target.checked : target.value;
+      const title = target.title;
       this.setState({
         input: event.target.value
       });

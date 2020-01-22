@@ -10,25 +10,43 @@ const SongsListItem = ({ clickSong, addedsong }) => {
   return (
     <div>
       <table>
-        <li
-          className="list-item"
-          onClick={clickSong}
-          key={addedsong.id}
-          value={addedsong.title}
-        >
-          <span>{addedsong.title}</span>
-        </li>
+        <tr>
+          <th>Title</th>
+
+          <tr>
+            <br />
+            <br />
+            <br />
+            <li
+              className="list-item"
+              onClick={clickSong}
+              key={addedsong.id}
+              value={addedsong.title}
+            >
+              {addedsong.title}
+            </li>
+          </tr>
+          <th>Author</th>
+          <tr>
+            <br />
+            <br />
+            <br />
+            <li
+              className="list-item"
+              onClick={clickSong}
+              key={addedsong.id}
+              value={addedsong.author}
+            >
+              {addedsong.author}
+            </li>
+
+            <br />
+          </tr>
+          <th>Genre</th>
+          <th>Rating</th>
+        </tr>
 
         <br />
-
-        <li
-          className="list-item"
-          onClick={clickSong}
-          key={addedsong.id}
-          value={addedsong.author}
-        >
-          <span>{addedsong.author}</span>
-        </li>
       </table>
     </div>
   );
