@@ -5,10 +5,14 @@ class InputField extends React.Component {
     input: ""
   };
 
+  // .value vervangen voor een this.state.author enz.
+  // meerdere keren
+
   render() {
     const onInput = event => {
       this.setState({
-        input: event.target.value
+        input: event.target.value,
+        author: event.target.value
       });
     };
 
@@ -19,6 +23,11 @@ class InputField extends React.Component {
         input: ""
       });
     };
+
+    // Wanneer je iets intypt wordt dit naar de setState van const onInput gestuurd, hierdoor
+    // komt dit terug in de value. Zie 14 en 37, input is hier gekoppeld.
+
+    // this.state. speciefiek maken of onChange veranderen, eerste is simpeler
 
     return (
       <form onSubmit={onSubmit}>
@@ -33,7 +42,7 @@ class InputField extends React.Component {
           placeholder="Author"
           type="search"
           onChange={onInput}
-          value={this.state.input}
+          value={this.state.author}
         ></input>
         <button type="submit">Voeg toe</button>
       </form>
