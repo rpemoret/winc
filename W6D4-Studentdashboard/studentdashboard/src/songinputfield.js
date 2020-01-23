@@ -34,7 +34,7 @@ class InputField extends React.Component {
     return (
       <form onSubmit={onSubmit}>
         <input
-          placeholder="Title"
+          placeholder="Name"
           type="search"
           forminput="title"
           value={this.state.title}
@@ -42,7 +42,7 @@ class InputField extends React.Component {
         ></input>
         <br />
         <input
-          placeholder="Author"
+          placeholder=""
           type="search"
           forminput="author"
           value={this.state.author}
