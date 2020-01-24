@@ -6,8 +6,7 @@ import Main from "./Main";
 function App() {
   return (
     <div>
-      <hr></hr>
-      <hr></hr>
+
       <Main />
     </div>
   );

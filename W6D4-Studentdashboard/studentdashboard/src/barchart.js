@@ -39,8 +39,6 @@ const BarChart = function() {
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       <h1>Student dashboard</h1>
 
-      <hr></hr>
-
       <VictoryChart
         domainPadding={16}
         style={{ parent: { maxWidth: "60%" } }}

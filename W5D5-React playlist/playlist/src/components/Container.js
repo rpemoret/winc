@@ -2,11 +2,13 @@ import React from "react";
 import SongOverview from "./SongOverview";
 import InputField from "./songinputfield";
 
-// in the constructor segment the props are defined, mostly objects within arrays
-
-// in the constructor segment the state is also set. If a component has a state, then it has an object that can change.
+// you can create a component that can be rendered to the DOM as a class component or a functional component
 
 class Container extends React.Component {
+  // in the constructor segment the props are defined, mostly objects within arrays
+
+  // in the constructor segment the state is also set. If a component has a state, then it has an object that can change.
+
   constructor(props) {
     super(props);
     this.state = {
