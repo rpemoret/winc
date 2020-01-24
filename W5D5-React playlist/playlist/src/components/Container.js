@@ -2,6 +2,10 @@ import React from "react";
 import SongOverview from "./SongOverview";
 import InputField from "./songinputfield";
 
+// in the constructor segment the props are defined, mostly objects within arrays
+
+// in the constructor segment the state is also set. If a component has a state, then it has an object that can change.
+
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +25,8 @@ class Container extends React.Component {
       ]
     };
   }
+
+  // in the render segment you can use functions to provide options like adding and filtering
 
   render() {
     const addSong = SongTitle => {
@@ -66,6 +72,8 @@ class Container extends React.Component {
         SongListOptions: this.state.SongListOptions.concat(addedsongtolist)
       });
     };
+
+    // in the return segment all of the previously defined component and some html is defined
 
     return (
       <div>
