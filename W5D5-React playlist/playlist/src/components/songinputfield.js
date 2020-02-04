@@ -27,7 +27,7 @@ class InputField extends React.Component {
     };
 
     // Wanneer je iets intypt wordt dit naar de setState van const onInput gestuurd, hierdoor
-    // komt dit terug in de value. Zie 14 en 37, input is hier gekoppeld.
+    // komt dit terug in de value.
 
     // this.state. speciefiek maken of onChange veranderen, eerste is simpeler
 
