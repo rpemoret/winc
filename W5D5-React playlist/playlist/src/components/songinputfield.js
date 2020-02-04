@@ -10,17 +10,14 @@ class InputField extends React.Component {
 
   render() {
     const onInput = event => {
-      const target = event.target;
-      const value = target.value;
-      const forminput = target.forminput;
       this.setState({
-        [forminput]: value
+        input: event.target.value
       });
     };
 
     const onSubmit = e => {
       e.preventDefault();
-      this.props.onSubmit(this.state.value);
+      this.props.onSubmit(this.state.input);
       this.setState({
         input: ""
       });
@@ -29,23 +26,21 @@ class InputField extends React.Component {
     // Wanneer je iets intypt wordt dit naar de setState van const onInput gestuurd, hierdoor
     // komt dit terug in de value.
 
-    // this.state. speciefiek maken of onChange veranderen, eerste is simpeler
+    // this.state. specifiek maken of onChange veranderen, eerste is simpeler
 
     return (
       <form onSubmit={onSubmit}>
         <input
           placeholder="Title"
           type="search"
-          forminput="title"
-          value={this.state.title}
+          value={this.state.input}
           onChange={onInput}
         ></input>
         <br />
         <input
           placeholder="Author"
           type="search"
-          forminput="author"
-          value={this.state.author}
+          value={this.state.input}
           onChange={onInput}
         ></input>
         <button type="submit">Voeg toe</button>
