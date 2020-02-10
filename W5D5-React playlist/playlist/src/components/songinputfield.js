@@ -11,9 +11,9 @@ class InputField extends React.Component {
   // meerdere keren
 
   render() {
-    const onInput = event => {
+    const onInput = e => {
       this.setState({
-        title: event.target.value
+        title: e.target.value
       });
     };
 
