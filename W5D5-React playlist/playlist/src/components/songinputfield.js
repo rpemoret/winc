@@ -25,7 +25,7 @@ class InputField extends React.Component {
 
     const onSubmit = e => {
       e.preventDefault();
-      this.props.onSubmit(this.state);
+      this.props.onSubmit(this.state.author);
       this.setState({
         title: ""
       });
