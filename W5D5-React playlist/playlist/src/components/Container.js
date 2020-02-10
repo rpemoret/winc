@@ -26,6 +26,7 @@ class Container extends React.Component {
         { id: 3, title: "", genre: "", author: "", rating: "" }
       ]
     };
+    console.log(this.state);
   }
 
   // in the render segment you can use functions to provide options like adding and filtering
@@ -63,19 +64,20 @@ class Container extends React.Component {
      multiple previously defined arrays. So you don't mutate the state
      directly again. */
 
-    const addSongtoList = addedsong => {
+    const addSongtoList = (title, author, genre) => {
       const addedsongtolist = {
         id: this.state.SongListOptions.length + 1,
-        title: addedsong,
-        author: addedsong,
-        genre: addedsong
+        title: title,
+        author: author,
+        genre: genre
       };
       this.setState({
         SongListOptions: this.state.SongListOptions.concat(addedsongtolist)
       });
+      console.log(title, author, genre);
     };
 
-    // in the return segment all of the previously defined component and some html is defined
+    // in the return segment all of the previously defined components and some html are defined
 
     return (
       <div>
