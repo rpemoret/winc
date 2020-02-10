@@ -2,7 +2,9 @@ import React from "react";
 
 class InputField extends React.Component {
   state = {
-    input: ""
+    title: "",
+    author: "",
+    rating: ""
   };
 
   // .value vervangen voor een this.state.author enz.
@@ -11,15 +13,17 @@ class InputField extends React.Component {
   render() {
     const onInput = event => {
       this.setState({
-        input: event.target.value
+        title: event.target.value
       });
     };
 
+    // props worden toegevoegd
+
     const onSubmit = e => {
       e.preventDefault();
-      this.props.onSubmit(this.state.input);
+      this.props.onSubmit(this.state.title);
       this.setState({
-        input: ""
+        title: ""
       });
     };
 
@@ -33,14 +37,14 @@ class InputField extends React.Component {
         <input
           placeholder="Title"
           type="search"
-          value={this.state.input}
+          value={this.state.title}
           onChange={onInput}
         ></input>
         <br />
         <input
           placeholder="Author"
           type="search"
-          value={this.state.input}
+          value={this.state.author}
           onChange={onInput}
         ></input>
         <button type="submit">Voeg toe</button>
