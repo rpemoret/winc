@@ -25,9 +25,10 @@ class InputField extends React.Component {
 
     const onSubmit = e => {
       e.preventDefault();
-      this.props.onSubmit(this.state.title);
+      this.props.onSubmit(this.state.title, this.state.author);
       this.setState({
-        title: ""
+        title: "",
+        author: ""
       });
     };
 
@@ -49,7 +50,7 @@ class InputField extends React.Component {
         <input
           placeholder="Author"
           type="search"
-          name="title"
+          name="author"
           value={this.state.author}
           onChange={onInput}
         ></input>
