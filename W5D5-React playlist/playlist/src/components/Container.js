@@ -74,14 +74,14 @@ class Container extends React.Component {
       this.setState({
         SongListOptions: this.state.SongListOptions.concat(addedsongtolist)
       });
-      console.log(title, author, genre);
+      console.log(title, author, genre, this.state.SongListOptions);
     };
 
     // in the return segment all of the previously defined components and some html are defined
 
     return (
       <div>
-        <h3>------</h3>
+        <br></br>
 
         <InputField onSubmit={addSongtoList} />
         <SongOverview

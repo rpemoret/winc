@@ -1,5 +1,7 @@
 import React from "react";
 
+// the state of the inputfields is set
+
 class InputField extends React.Component {
   state = {
     title: "",
@@ -7,8 +9,7 @@ class InputField extends React.Component {
     rating: ""
   };
 
-  // .value vervangen voor een this.state.author enz.
-  // meerdere keren
+  // the state when using an inputfield is set according to the name of the inputfield
 
   render() {
     const onInput = e => {
@@ -22,6 +23,8 @@ class InputField extends React.Component {
     };
 
     // props worden toegevoegd
+
+    // each item separately
 
     const onSubmit = e => {
       e.preventDefault();
@@ -54,7 +57,7 @@ class InputField extends React.Component {
           value={this.state.author}
           onChange={onInput}
         ></input>
-        <button type="submit">Voeg toe</button>
+        <button type="submit">Add to list</button>
       </form>
     );
   }
