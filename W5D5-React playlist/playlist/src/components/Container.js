@@ -64,12 +64,13 @@ class Container extends React.Component {
      multiple previously defined arrays. So you don't mutate the state
      directly again. */
 
-    const addSongtoList = (title, author, genre) => {
+    const addSongtoList = (title, author, genre, rating) => {
       const addedsongtolist = {
         id: this.state.SongListOptions.length + 1,
         title: title,
         author: author,
-        genre: genre
+        genre: genre,
+        rating: rating
       };
       this.setState({
         SongListOptions: this.state.SongListOptions.concat(addedsongtolist)
@@ -88,15 +89,6 @@ class Container extends React.Component {
           SongListOptions={this.state.SongListOptions}
           SongOverview={SongOverview}
         />
-
-        <table>
-          <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Genre</th>
-            <th>Rating</th>
-          </tr>
-        </table>
       </div>
     );
   }

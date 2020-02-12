@@ -8,47 +8,75 @@ import React from "react";
 
 const SongsListItem = ({ clickSong, addedsong }) => {
   return (
-    <div>
-      <table>
+    <table>
+      <tr>
+        <th></th>
+
         <tr>
-          <th>Title</th>
-
-          <tr>
-            <br />
-            <br />
-            <br />
-            <li
-              className="list-item"
-              onClick={clickSong}
-              key={addedsong.id}
-              value={addedsong.title}
-            >
-              {addedsong.title}
-            </li>
-          </tr>
-          <th>Author</th>
-          <tr>
-            <br />
-            <br />
-            <br />
-            <li
-              className="list-item"
-              onClick={clickSong}
-              key={addedsong.id}
-              value={addedsong.author}
-            >
-              {addedsong.author}
-            </li>
-
-            <br />
-          </tr>
-          <th>Genre</th>
-          <th>Rating</th>
+          <br />
+          <br />
+          <br />
+          <td
+            className="list-item"
+            onClick={clickSong}
+            key={addedsong.id}
+            value={addedsong.title}
+          >
+            {addedsong.title}
+          </td>
         </tr>
+        <th></th>
+        <tr>
+          <br />
+          <br />
+          <br />
+          <td
+            className="list-item"
+            onClick={clickSong}
+            key={addedsong.id}
+            value={addedsong.author}
+          >
+            {addedsong.author}
+          </td>
 
-        <br />
-      </table>
-    </div>
+          <br />
+        </tr>
+        <th></th>
+        <tr>
+          <br />
+          <br />
+          <br />
+          <td
+            className="list-item"
+            onClick={clickSong}
+            key={addedsong.id}
+            value={addedsong.genre}
+          >
+            {addedsong.genre}
+          </td>
+
+          <br />
+        </tr>
+        <th></th>
+        <tr>
+          <br />
+          <br />
+          <br />
+          <td
+            className="list-item"
+            onClick={clickSong}
+            key={addedsong.id}
+            value={addedsong.rating}
+          >
+            {addedsong.rating}
+          </td>
+
+          <br />
+        </tr>
+      </tr>
+
+      <br />
+    </table>
   );
 };
 

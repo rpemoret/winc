@@ -12,13 +12,45 @@ class SongOverview extends React.Component {
             title={addedsong.title}
             author={addedsong.author}
             genre={addedsong.genre}
+            rating={addedsong.rating}
           />
         ))
       : " ";
 
     return (
       <React.Fragment>
-        <ul>{listItems}</ul>
+        <div>
+          <table>
+            <tr>
+              <th>Title</th>
+              <tr>
+                <br />
+                <br />
+                <br />
+              </tr>
+              <th>Author</th>
+              <tr>
+                <br />
+                <br />
+                <br />
+
+                <br />
+              </tr>
+              <th>Genre</th>
+              <tr>
+                <br />
+                <br />
+                <br />
+
+                <br />
+              </tr>
+              <th>Rating</th>
+            </tr>
+
+            <br />
+          </table>
+        </div>
+        <tr>{listItems}</tr>
       </React.Fragment>
     );
   }

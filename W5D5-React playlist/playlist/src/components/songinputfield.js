@@ -6,6 +6,7 @@ class InputField extends React.Component {
   state = {
     title: "",
     author: "",
+    genre: "",
     rating: ""
   };
 
@@ -28,10 +29,17 @@ class InputField extends React.Component {
 
     const onSubmit = e => {
       e.preventDefault();
-      this.props.onSubmit(this.state.title, this.state.author);
+      this.props.onSubmit(
+        this.state.title,
+        this.state.author,
+        this.state.genre,
+        this.state.rating
+      );
       this.setState({
         title: "",
-        author: ""
+        author: "",
+        genre: "",
+        rating: ""
       });
     };
 
@@ -55,6 +63,20 @@ class InputField extends React.Component {
           type="search"
           name="author"
           value={this.state.author}
+          onChange={onInput}
+        ></input>
+        <input
+          placeholder="Genre"
+          type="search"
+          name="genre"
+          value={this.state.genre}
+          onChange={onInput}
+        ></input>
+        <input
+          placeholder="Rating"
+          type="search"
+          name="rating"
+          value={this.state.rating}
           onChange={onInput}
         ></input>
         <button type="submit">Add to list</button>
