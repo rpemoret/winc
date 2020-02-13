@@ -35,8 +35,18 @@ table {
   color: rgb(15, 102, 160);
   font-size: 16px;
   table-layout: fixed;
-  width: 45%;
+  width: 60%;
   margin-left: 3em;
+}
+
+.tableitems {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(15, 102, 160);
+  font-size: 16px;
+  table-layout: fixed;
+  width: 70%;
+  margin-left: -0.5em;
 }
 
 th {
@@ -69,7 +79,7 @@ input {
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
   padding: 15px;
   background: rgba(255, 255, 255, 0.6);
-  margin: 0 0 10px 0;
+  margin: 0 10px 10px 10px;
   border-radius: 20px;
 }
 
