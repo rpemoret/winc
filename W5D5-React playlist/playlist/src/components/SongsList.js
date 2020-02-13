@@ -8,7 +8,7 @@ import React from "react";
 
 const SongsListItem = ({ clickSong, addedsong }) => {
   return (
-    <table class="tableitems">
+    <table className="tableitems">
       <tr>
         <th></th>
 
