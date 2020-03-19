@@ -23,27 +23,23 @@ class SongOverview extends React.Component {
           <table>
             <tr>
               <th>Title</th>
-              <tr>
-                <br />
-                <br />
-                <br />
-              </tr>
+              <br />
+              <br />
+              <br />
+              <tr></tr>
               <th>Author</th>
-              <tr>
-                <br />
-                <br />
-                <br />
-
-                <br />
-              </tr>
+              <br />
+              <br />
+              <br />
+              <br />
+              <tr></tr>
               <th>Genre</th>
-              <tr>
-                <br />
-                <br />
-                <br />
+              <br />
+              <br />
+              <br />
 
-                <br />
-              </tr>
+              <br />
+              <tr></tr>
               <th>Rating</th>
             </tr>
 
