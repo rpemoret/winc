@@ -1,1 +1,140 @@
+<!DOCTYPE HTML>
+<html>
 
+<head>
+
+    <style>
+        .expandmenu {
+            background-color: none;
+            color: rgb(0, 0, 0);
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .expandmenu:hover,
+        .expandmenu:focus {
+
+            background-color: none;
+        }
+
+        .menu {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .expand-content {
+            display: none;
+            position: absolute;
+            background-color: yellow;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
+            z-index: 1;
+        }
+
+        .expand-content a {
+
+            color: rgb(0, 0, 0);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+        }
+
+        .expand-content a:hover {
+
+            background-color: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .home {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .yellow {
+            background-color: rgb(221, 255, 29);
+        }
+
+        .blue {
+            background-color: rgb(27, 171, 255)
+        }
+
+        .orange {
+            background-color: rgb(255, 195, 29)
+        }
+
+        .green {
+            background-color: rgb(74, 255, 29)
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <img src="menu.png" onclick="menuFunction()" onmouseover="menuFunction()" class="expandmenu" width="50"></img>
+        <div id="menuexpand" class="expand-content">
+
+            <a class="home" onclick="newbackgroundcolor('white')" href="#"> Home</a>
+            <a class="yellow" onclick="newbackgroundcolor('yellow')" href="#"> Yellow</a>
+            <a class="blue" onclick="newbackgroundcolor('blue')" href="#"> Blue</a>
+            <a class="orange" onclick="newbackgroundcolor('orange')" href="#"> Orange</a>
+            <a class="green" onclick="newbackgroundcolor('green')" href="#"> Green</a>
+
+        </div>
+
+    </div>
+
+    <script>
+
+
+        // define and get the class of a background, add eventlistener, call a function
+
+        const getbackground = document.getElementsByClassName("yellow");
+        getbackground.addEventlistener("click"), function () { newbackground() }
+
+        // add a new background through a new function
+
+        newbackground = function () { document.body.classList.toggle("yellow-background"); }
+
+
+        // expand the menu
+
+        function menuFunction() {
+
+            document.getElementById("menuexpand").classList.toggle("show");
+        }
+
+        // menu goes away when clicked outside of it
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.expandmenu')) {
+                var expndmenu = document.getElementsByClassName("expand-content");
+                var i;
+                for (i = 0; i < expndmenu.length; i++) {
+                    var fullMenu = expndmenu[i];
+                    if (fullMenu.classList.contains('show')) {
+                        fullMenu.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function newbackgroundcolor(color) {
+
+            document.body.style.background = color;
+        }
+
+    </script>
+
+</body>
+
+</html>
